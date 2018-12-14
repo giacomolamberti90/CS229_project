@@ -31,8 +31,6 @@ The dataset (1 GB), including 10-crop VGG19 features, can be downloaded by runni
 
 wget http://www.cs.toronto.edu/~vendrov/order/coco.zip
 
-The code can be run by gong to the code directory and typing:
-
-python main.py
+The code can be run by going to the code directory and typing: python main.py
 
 However, the code won't run without data.
