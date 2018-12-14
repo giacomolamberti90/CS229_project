@@ -24,7 +24,7 @@ def compute_errors(s_emb, im_emb):
 
 def order_violations(s, im):
     """ Computes the order violations (Equation 2 in the paper) """
-    return numpy.power(numpy.linalg.norm(numpy.maximum(0, s - im)),2)
+    return numpy.power(numpy.linalg.norm(s - im),2)
 
 
 def l2norm(X):
@@ -43,7 +43,7 @@ def contrastive_loss(labels, predict):
     im = res[1]
     im2 = im.dimshuffle(('x', 0, 1))
     s2 = s.dimshuffle((0, 'x', 1))
-    errors = tensor.pow(tensor.maximum(0, im2 - s2), 2).sum(axis=2)
+    errors = tensor.pow(im2 - s2, 2).sum(axis=2)
     diagonal = errors.diagonal()
     # compare every diagonal score to scores in its column (all contrastive images for each sentence)
     cost_s = tensor.maximum(0, margin - errors + diagonal)
@@ -134,19 +134,28 @@ def train(params):
         # # this returns a tensor of emb_image
         image_input = Input(shape=(model_config['dim_cnn'],), name='image_input')
         X = Dense(model_config['output_dim'])(image_input)
-        X = Lambda(lambda x: l2norm(x))(X)
-        emb_image = Lambda(lambda x: abs(x))(X)
+        emb_image = Lambda(lambda x: l2norm(x))(X)
+        #emb_image = Lambda(lambda x: abs(x))(X)
 
         print ("Text model loading")
         # this returns a tensor of emb_cap
         cap_input = Input(shape=(model_config['max_cap_length'],), dtype='int32', name='cap_input')
-        #X = Masking(mask_value=0,input_shape=(model_config['max_cap_length'], model_config['output_dim']))(cap_input)
-        X = Embedding(output_dim=model_config['dim_word'], input_dim=model_config['worddict']+2, input_length=model_config['max_cap_length'])(cap_input)
-        #X = Embedding(output_dim=model_config['dim_word'], input_dim=len(worddict)+2, input_length=model_config['max_cap_length'], weights=[embedding_matrix], trainable=True)(cap_input)
+        X = Masking(mask_value=0,input_shape=(model_config['max_cap_length'], model_config['output_dim']))(X)
+        
+        # from scratch
+        #X = Embedding(output_dim=model_config['dim_word'], input_dim=model_config['worddict']+2, input_length=model_config['max_cap_length'])(cap_input)
+        
+        # pretrained GloVe
+        X = Embedding(output_dim=model_config['dim_word'], input_dim=len(worddict)+2, input_length=model_config['max_cap_length'], weights=[embedding_matrix], trainable=True)(cap_input)
+        
+        # GRU activation
         X = GRU(output_dim=model_config['output_dim'], return_sequences=False)(X)
         
-        X = Lambda(lambda x: l2norm(x))(X)
-        emb_cap = Lambda(lambda x: abs(x))(X)
+        # LSTM activation
+        #X = LSTM(output_dim=model_config['output_dim'], return_sequences=False)(X)
+        
+        emb_cap = Lambda(lambda x: l2norm(x))(X)
+        #emb_cap = Lambda(lambda x: abs(x))(X)
 
         print ("loading the joined model")
         # merged = _Merge( mode='concat')([emb_cap, emb_image])
@@ -155,39 +164,12 @@ def train(params):
 
         print ("compiling the model")
         model.compile(optimizer=model_config['optimizer'][0], loss=contrastive_loss)
-
-        # uncomment for model selection and add  validation_data=(gen_val_data()) when calling fit_generator
-        # def gen_val_data():
-        #     val_bacthes = [[x, im] for x, im in val_iter]
-        #     x1 = []
-        #     x2 = []
-        #     for batch in val_bacthes:
-        #         x1.append(batch[0])
-        #         x2.append(batch[1])
-        #     mat_x1 = numpy.array(x1).reshape(7*model_config['batch_size'],model_config['max_cap_length'])
-        #     mat_x2 = numpy.array(x2).reshape(7*model_config['batch_size'], model_config['dim_cnn'])
-        #     dummy = numpy.zeros(shape=(len(mat_x1), model_config['output_dim'] * 2))
-        #     return [mat_x1,mat_x2], dummy
-        #
-
-        #def train_generator(batch_size):
-        #    def gen(batch_size):
-        #        batches = [[x, im] for x, im in train_iter]
-        #        dummy = numpy.zeros(shape=(batch_size, model_config['output_dim'] * 2))
-        #        for batch in batches:
-        #            yield (batch, dummy)
-        #    return gen
-
         def train_generator(batch_size):
             while True:
                 batches = [[x, im] for x, im in train_iter]
                 dummy = numpy.zeros(shape=(batch_size, model_config['output_dim'] * 2))
                 for batch in batches:
                     yield (batch, dummy)
-
-        #uncomment for model selection and add  callbacks=[early_stopping] when calling fit_generator
-        #ModelCheckpoint('/home/igor/PycharmProjects/GRU/models', monitor='val_loss', verbose=0, save_best_only=False, mode='auto')
-        #early_stopping = EarlyStopping(monitor='val_loss', patience=50)
 
         print(model_config['worddict'] / model_config['batch_size'] / 100)
 
@@ -226,45 +208,20 @@ def train(params):
 
         for ip in range(model_config['epoch']):
 
-          print('Epoch: %s ...' % str(ip+1))
-          train_hist = model.fit_generator(train_generator(batch_size=model_config['batch_size']),
+            print('Epoch: %s ...' % str(ip+1))
+            train_hist = model.fit_generator(train_generator(batch_size=model_config['batch_size']),
                                            steps_per_epoch=(
                                                len(train['ims']) / model_config['batch_size']),
                                            #steps_per_epoch=5,
                                            epochs=model_config['epoch']/model_config['epoch'], verbose=1, class_weight=None, max_queue_size=1)
-          model.save_weights('../results/from_scratch/my_model_weights_' + str(ip) + '.h5')
-          print(train_hist.history)
+            model.save_weights('../results/from_scratch/my_model_weights_' + str(ip) + '.h5')
+            print(train_hist.history)
 
         #evaluate model - recall@10 & mean_rank metric
-          eval_model()
-
-        # uncomment for model selection
-        #return {'loss': train_hist.history['loss'][0], 'status': STATUS_OK, 'model': model}
+        eval_model()
 
     except:
         raise
-
-
-
-
-
-#Grid search configs
-
-#best setting
-# {'margin': 0.1, 'output_dim': 1024, 'optimizer': 'adam', 'dim_word': 500}
-#Image to text: 85.6,
-#Text to image: 75.7,
-
-
-# uncomment for model selection
-# space = { 'margin' : hp.choice('margin', [0.05, 0.1, 0.15]),
-#           # 'batch_size': hp.choice('batch_size', [256, 128]),
-#           'optimizer': hp.choice('optimizer', ['adam']),
-#           'output_dim' : hp.choice('output_dim', [1024, 2048]),
-#           'dim_word' : hp.choice('dim_word', [100, 300, 500]),
-#
-# }
-
 
 
 model_config = {}
@@ -273,9 +230,3 @@ def trainer(config):
     global model_config
     model_config = config
     train(model_config)
-
-    # uncomment for model selection
-    #trials = Trials()
-    #best = fmin(train, space, algo=tpe.suggest, max_evals=100, trials=trials)
-    #print 'best: '
-    #print best
