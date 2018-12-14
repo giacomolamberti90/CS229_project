@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------
+[[16690,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: purple-giraffe
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7201 on context None
+Mapped name None to device cuda0: Tesla M60 (8794:00:00.0)
+/anaconda/envs/py35/lib/python3.5/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using Theano backend.
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_1 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_2 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/data/home/giacomol/cs229/image_caption/code/eval_only.py:130: UserWarning: Update your `GRU` call to the Keras 2 API: `GRU(return_sequences=False, units=1024)`
+  X = GRU(output_dim=model_config['output_dim'], return_sequences=False)(X)
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_3 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_4 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+{'model_cnn': '/home/giacomol/cs229/image_caption/data/vgg19_weights.h5', 'dim_word': 300, 'output_dim': 1024, 'attn_rnn_dim': 100, 'dim_cnn': 4096, 'glove.path': '/home/giacomol/cs229/image_caption/data/glove.6B.300d.txt', 'margin': 0.1, 'optimizer': 'adam', 'data': '/home/giacomol/cs229/image_caption/data/coco', 'save_dir': 'anypath', 'max_cap_length': 50, 'cnn': '10crop', 'epoch': 50, 'lrate': 0.05, 'batch_size': 128}
+Loading dataset
+Size: caps: 
+566435
+Size: ims: 
+113287
+Creating dictionary
+Dictionary size: 27009
+Found 400000 word vectors.
+Loading data
+Great
+Great
+Great
+Image model loading
+Text model loading
+loading the joined model
+compiling the model
+2.110078125
+evaluating model...
+(27011, 300)
+(300, 3072)
+(1024, 3072)
+(3072,)
+(4096, 1024)
+(1024,)
+Image to text: 89.5 5.4
+Text to image: 37.0 7.3
