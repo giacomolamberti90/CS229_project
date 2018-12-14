@@ -20,7 +20,7 @@ The repository contains:
           
           6. eval_only.py         -> perform evaluation (no training)
           
-          7. eval_custom_input.py -> read an interactive caption and pull put the top 10 related images (need the raw pictures to work!)
+          7. eval_custom_input.py -> read an interactive caption and pull out the top 10 related images (need the raw pictures to work!)
           
           
   - results: directory containing text files with a summary of the various results.
