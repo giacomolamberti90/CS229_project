@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------
+[[57185,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: purple-elephants
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7201 on context None
+Mapped name None to device cuda0: Tesla M60 (4C37:00:00.0)
+/anaconda/envs/py35/lib/python3.5/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using Theano backend.
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_1 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 2048)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_2 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 2048)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+{'dim_word': 300, 'output_dim': 1024, 'margin': 0.05, 'optimizer': 'adam', 'max_cap_length': 50, 'glove.path': '/home/lucas/cs229/image_caption/data/glove.6B.300d.txt', 'data': '/home/lucas/cs229/image_caption/data/coco', 'dim_cnn': 4096, 'model_cnn': '/home/lucas/cs229/image_caption/data/vgg19_weights.h5', 'attn_rnn_dim': 100, 'batch_size': 128, 'save_dir': 'anypath', 'cnn': '10crop', 'lrate': 0.0005, 'epoch': 50}
+Loading dataset
+Size: caps: 
+566435
+Size: ims: 
+113287
+Creating dictionary
+Dictionary size: 27009
+['-0.090449', '-0.19081', '-0.40957', '0.18753', '0.17078', '0.079622', '0.46217', '0.43855', '-0.72471', '0.73476', '-0.1962', '-0.13744', '-0.12799', '0.040379', '-0.015808', '-0.070174', '-0.034272', '-0.19967', '-0.031454', '0.32451', '0.62108', '0.45785', '0.014615', '-0.19807', '0.078922', '-0.3029', '0.50543', '-0.16801', '-0.0014152', '0.039471', '0.096251', '0.057652', '0.38833', '-0.042787', '0.64394', '-0.36439', '-0.33474', '-0.047964', '0.30875', '-0.14799', '0.26144', '-0.083733', '-0.19507', '0.21938', '-0.27953', '-0.04149', '-0.043754', '0.37338', '-0.23226', '-0.64313', '-0.51713', '0.087359', '0.73054', '-0.38763', '0.28632', '0.0025073', '-0.10975', '-0.16118', '-0.37297', '0.3583', '-0.26273', '0.42217', '-0.70898', '0.0071256', '0.22417', '0.18545', '-0.15054', '-0.35852', '0.3857', '-0.3944', '0.056589', '-0.35206', '0.36064', '-0.08287', '0.73741', '-0.00043511', '0.1926', '-0.32637', '0.062444', '0.056191', '0.11912', '0.50834', '0.31976', '0.099045', '-0.79359', '0.55738', '-0.025824', '-0.22824', '0.032154', '0.17826', '-0.26007', '-0.48437', '0.35867', '-0.47548', '0.26642', '0.098841', '0.37196', '0.16963', '0.098981', '0.52748', '-0.38522', '-0.18908', '0.55978', '-0.15545', '0.27447', '-0.098327', '0.3041', '-0.75011', '0.10503', '-0.51559', '0.19358', '0.35247', '0.41084', '-0.10307', '0.14162', '-0.40214', '0.15314', '0.053116', '0.020674', '0.53091', '-0.16182', '0.58935', '-0.048419', '0.66007', '-0.27539', '0.14324', '-0.30523', '0.081395', '0.50887', '-0.62265', '0.27033', '0.40723', '-0.14222', '-0.065011', '0.1061', '-0.55788', '-0.19712', '-0.13315', '-0.60892', '0.039384', '0.64603', '0.056069', '-0.26908', '-0.31003', '0.15944', '-0.076003', '0.45708', '-0.89071', '-0.15714', '-0.22683', '-0.64596', '0.16507', '0.39598', '-0.26376', '-0.1052', '0.014721', '0.22201', '0.22877', '-0.12902', '0.34396', '-0.070116', '0.097943', '0.29541', '0.63855', '0.15526', '-0.4101', '0.42687', '0.67414', '0.30006', '-0.72641', '-0.5018', '-0.51829', '-0.12874', '0.041281', '-0.20317', '-0.1563', '-0.24702', '-0.53784', '-0.033509', '-0.47991', '0.36856', '-0.39835', '-0.27954', '-0.10714', '0.15693', '-0.1737', '0.35496', '-0.02446', '-0.13977', '0.62914', '0.2889', '-0.3846', '-0.44769', '-0.0046174', '-0.066468', '0.29454', '-0.052124', '0.24961', '-0.373', '-0.10323', '-0.77531', '0.29628', '0.6242', '0.18396', '-0.11038', '-0.26001', '-0.25671', '-0.50608', '-0.12633', '-0.35174', '0.39681', '0.31144', '0.16393', '-0.14025', '0.32038', '-0.30215', '0.024151', '0.0081297', '0.12446', '-0.14444', '-0.49691', '-0.16741', '0.26947', '-0.53311', '0.011414', '-0.21694', '0.26651', '-0.78178', '-0.27221', '-0.46026', '0.0918', '0.24146', '-0.19901', '-0.52578', '-0.1407', '-0.58932', '-0.38313', '-0.60042', '0.091036', '0.024269', '0.61839', '-0.16716', '-0.18745', '-0.035668', '0.9732', '0.48675', '-0.5227', '-0.080579', '-0.37906', '0.21118', '0.10767', '-0.022602', '0.12146', '0.2112', '-0.2082', '0.095958', '-0.19431', '-0.040243', '-0.21141', '-0.15385', '-0.1042', '0.43136', '-0.26117', '0.31893', '0.51161', '-0.072482', '-0.40836', '0.0025364', '0.069912', '-0.022106', '0.070161', '0.30092', '-0.50752', '0.29583', '0.092206', '-0.25184', '0.82738', '0.078939', '-0.82651', '-0.40753', '-0.045501', '0.19148', '0.071594', '0.11683', '0.067358', '0.63842', '-0.13868', '-0.53623', '-0.039082', '0.07051', '-0.020376', '0.30295', '0.28432', '-0.61869', '-0.43641', '-0.17291', '0.16907', '0.32935', '-0.2674', '0.088559']
+Found 390034 word vectors.
+Found 9966 non-regular words.
+Loading data
+Great
+Great
+Great
+Image model loading
+Text model loading
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    trainer_bidirection.trainer(config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer_bidirection.py", line 355, in trainer
+    train(model_config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer_bidirection.py", line 186, in train
+    X_cap = Bidirectional(GRU(output_dim=model_config['output_dim'], return_sequences=True))(X) # (batch_size, time_steps, 2*output_dim)
+NameError: name 'Bidirectional' is not defined

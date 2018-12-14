@@ -1,0 +1,230 @@
+--------------------------------------------------------------------------
+[[55672,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: purple-elephants
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+{'save_dir': 'anypath', 'epoch': 300, 'cnn': '10crop', 'dim_cnn': 4096, 'margin': 0.05, 'batch_size': 128, 'model_cnn': '/home/lucas/cs229/image_caption/data/vgg19_weights.h5', 'glove.path': '/home/lucas/cs229/image_caption/data/glove.6B.100d.txt', 'dim_word': 300, 'data': '/home/lucas/cs229/image_caption/data/coco', 'lrate': 0.05, 'optimizer': 'adam', 'max_cap_length': 50, 'output_dim': 1024}
+Loading dataset
+Creating dictionary
+Dictionary size: 27009
+Found 400000 word vectors.
+Loading data
+Great
+Great
+Great
+Image model loading
+Text model loading
+loading the joined model
+compiling the model
+2.110078125
+Epoch 1/300
+
+  1/211 [..............................] - ETA: 9:09 - loss: 1625.7245
+  2/211 [..............................] - ETA: 5:15 - loss: 1626.1021
+  3/211 [..............................] - ETA: 3:54 - loss: 1651.1541
+  4/211 [..............................] - ETA: 3:11 - loss: 1678.8589
+  5/211 [..............................] - ETA: 2:45 - loss: 1675.7579
+  6/211 [..............................] - ETA: 2:28 - loss: 1669.2056
+  7/211 [..............................] - ETA: 2:16 - loss: 1664.1024
+  8/211 [>.............................] - ETA: 2:06 - loss: 1661.5723
+  9/211 [>.............................] - ETA: 1:59 - loss: 1657.5781
+ 10/211 [>.............................] - ETA: 1:53 - loss: 1654.3807
+ 11/211 [>.............................] - ETA: 1:48 - loss: 1651.8404
+ 12/211 [>.............................] - ETA: 1:44 - loss: 1649.7796
+ 13/211 [>.............................] - ETA: 1:40 - loss: 1647.9178
+ 14/211 [>.............................] - ETA: 1:37 - loss: 1646.3249
+ 15/211 [=>............................] - ETA: 1:35 - loss: 1644.9384
+ 16/211 [=>............................] - ETA: 1:32 - loss: 1643.7091
+ 17/211 [=>............................] - ETA: 1:30 - loss: 1642.6516
+ 18/211 [=>............................] - ETA: 1:28 - loss: 1641.7064
+ 19/211 [=>............................] - ETA: 1:26 - loss: 1640.8518
+ 20/211 [=>............................] - ETA: 1:24 - loss: 1640.0815
+ 21/211 [=>............................] - ETA: 1:23 - loss: 1639.3823
+ 22/211 [==>...........................] - ETA: 1:21 - loss: 1638.7288
+ 23/211 [==>...........................] - ETA: 1:20 - loss: 1638.1085
+ 24/211 [==>...........................] - ETA: 1:19 - loss: 1637.4988
+ 25/211 [==>...........................] - ETA: 1:18 - loss: 1636.9519
+ 26/211 [==>...........................] - ETA: 1:17 - loss: 1636.3419
+ 27/211 [==>...........................] - ETA: 1:16 - loss: 1635.7512
+ 28/211 [==>...........................] - ETA: 1:15 - loss: 1635.0050
+ 29/211 [===>..........................] - ETA: 1:14 - loss: 1634.0302
+ 30/211 [===>..........................] - ETA: 1:13 - loss: 1632.8256
+ 31/211 [===>..........................] - ETA: 1:12 - loss: 1631.1736
+ 32/211 [===>..........................] - ETA: 1:11 - loss: 1628.8359
+ 33/211 [===>..........................] - ETA: 1:10 - loss: 1623.7968
+ 34/211 [===>..........................] - ETA: 1:09 - loss: 1618.6333
+ 35/211 [===>..........................] - ETA: 1:09 - loss: 1619.2506
+ 36/211 [====>.........................] - ETA: 1:08 - loss: 1621.1171
+ 37/211 [====>.........................] - ETA: 1:07 - loss: 1620.9196
+ 38/211 [====>.........................] - ETA: 1:07 - loss: 1620.5204
+ 39/211 [====>.........................] - ETA: 1:06 - loss: 1620.0913
+ 40/211 [====>.........................] - ETA: 1:05 - loss: 1621.4528
+ 41/211 [====>.........................] - ETA: 1:05 - loss: 1621.6074
+ 42/211 [====>.........................] - ETA: 1:04 - loss: 1621.2995
+ 43/211 [=====>........................] - ETA: 1:03 - loss: 1621.8585
+ 44/211 [=====>........................] - ETA: 1:03 - loss: 1623.2527
+ 45/211 [=====>........................] - ETA: 1:02 - loss: 1622.8711
+ 46/211 [=====>........................] - ETA: 1:02 - loss: 1622.6747
+ 47/211 [=====>........................] - ETA: 1:01 - loss: 1623.3165
+ 48/211 [=====>........................] - ETA: 1:01 - loss: 1623.7934
+ 49/211 [=====>........................] - ETA: 1:00 - loss: 1622.2694
+ 50/211 [======>.......................] - ETA: 59s - loss: 1617.9916 
+ 51/211 [======>.......................] - ETA: 59s - loss: 1613.6304
+ 52/211 [======>.......................] - ETA: 58s - loss: 1612.5791
+ 53/211 [======>.......................] - ETA: 58s - loss: 1612.2070
+ 54/211 [======>.......................] - ETA: 57s - loss: 1609.9047
+ 55/211 [======>.......................] - ETA: 57s - loss: 1608.7546
+ 56/211 [======>.......................] - ETA: 56s - loss: 1606.7307
+ 57/211 [=======>......................] - ETA: 56s - loss: 1607.0957
+ 58/211 [=======>......................] - ETA: 55s - loss: 1605.5792
+ 59/211 [=======>......................] - ETA: 55s - loss: 1605.6981
+ 60/211 [=======>......................] - ETA: 55s - loss: 1604.8928
+ 61/211 [=======>......................] - ETA: 54s - loss: 1602.7258
+ 62/211 [=======>......................] - ETA: 54s - loss: 1601.8021
+ 63/211 [=======>......................] - ETA: 53s - loss: 1600.7491
+ 64/211 [========>.....................] - ETA: 53s - loss: 1599.4019
+ 65/211 [========>.....................] - ETA: 52s - loss: 1598.3102
+ 66/211 [========>.....................] - ETA: 52s - loss: 1597.4087
+ 67/211 [========>.....................] - ETA: 51s - loss: 1596.6608
+ 68/211 [========>.....................] - ETA: 51s - loss: 1595.3149
+ 69/211 [========>.....................] - ETA: 51s - loss: 1595.1663
+ 70/211 [========>.....................] - ETA: 50s - loss: 1595.5006
+ 71/211 [=========>....................] - ETA: 50s - loss: 1595.3719
+ 72/211 [=========>....................] - ETA: 49s - loss: 1594.0672
+ 73/211 [=========>....................] - ETA: 49s - loss: 1593.8662
+ 74/211 [=========>....................] - ETA: 48s - loss: 1593.4659
+ 75/211 [=========>....................] - ETA: 48s - loss: 1593.1014
+ 76/211 [=========>....................] - ETA: 48s - loss: 1592.4558
+ 77/211 [=========>....................] - ETA: 47s - loss: 1592.9648
+ 78/211 [==========>...................] - ETA: 47s - loss: 1592.2397
+ 79/211 [==========>...................] - ETA: 46s - loss: 1592.0002
+ 80/211 [==========>...................] - ETA: 46s - loss: 1591.0927
+ 81/211 [==========>...................] - ETA: 46s - loss: 1590.4939
+ 82/211 [==========>...................] - ETA: 45s - loss: 1589.6417
+ 83/211 [==========>...................] - ETA: 45s - loss: 1589.3814
+ 84/211 [==========>...................] - ETA: 44s - loss: 1587.8294
+ 85/211 [===========>..................] - ETA: 44s - loss: 1587.3246
+ 86/211 [===========>..................] - ETA: 44s - loss: 1587.0121
+ 87/211 [===========>..................] - ETA: 43s - loss: 1586.8760
+ 88/211 [===========>..................] - ETA: 43s - loss: 1585.7951
+ 89/211 [===========>..................] - ETA: 42s - loss: 1585.6265
+ 90/211 [===========>..................] - ETA: 42s - loss: 1585.8240
+ 91/211 [===========>..................] - ETA: 42s - loss: 1584.7525
+ 92/211 [============>.................] - ETA: 41s - loss: 1584.5509
+ 93/211 [============>.................] - ETA: 41s - loss: 1583.9540
+ 94/211 [============>.................] - ETA: 40s - loss: 1583.4339
+ 95/211 [============>.................] - ETA: 40s - loss: 1582.1739
+ 96/211 [============>.................] - ETA: 40s - loss: 1580.9425
+ 97/211 [============>.................] - ETA: 39s - loss: 1579.1988
+ 98/211 [============>.................] - ETA: 39s - loss: 1578.8546
+ 99/211 [=============>................] - ETA: 39s - loss: 1578.0171
+100/211 [=============>................] - ETA: 38s - loss: 1577.1686
+101/211 [=============>................] - ETA: 38s - loss: 1575.6944
+102/211 [=============>................] - ETA: 37s - loss: 1574.1285
+103/211 [=============>................] - ETA: 37s - loss: 1573.0726
+104/211 [=============>................] - ETA: 37s - loss: 1572.4917
+105/211 [=============>................] - ETA: 36s - loss: 1570.8307
+106/211 [==============>...............] - ETA: 36s - loss: 1569.7304
+107/211 [==============>...............] - ETA: 36s - loss: 1568.4879
+108/211 [==============>...............] - ETA: 35s - loss: 1566.9522
+109/211 [==============>...............] - ETA: 35s - loss: 1565.5836
+110/211 [==============>...............] - ETA: 34s - loss: 1564.4373
+111/211 [==============>...............] - ETA: 34s - loss: 1562.9211
+112/211 [==============>...............] - ETA: 34s - loss: 1560.4837
+113/211 [===============>..............] - ETA: 33s - loss: 1558.6118
+114/211 [===============>..............] - ETA: 33s - loss: 1556.0238
+115/211 [===============>..............] - ETA: 33s - loss: 1553.5194
+116/211 [===============>..............] - ETA: 32s - loss: 1551.5326/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7201 on context None
+Mapped name None to device cuda0: Tesla M60 (815D:00:00.0)
+/anaconda/envs/py35/lib/python3.5/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using Theano backend.
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_1 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_2 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/data/home/lucas/cs229/image_caption/code/trainer.py:125: UserWarning: Update your `GRU` call to the Keras 2 API: `GRU(return_sequences=False, units=1024)`
+  X = GRU(output_dim=model_config['output_dim'], return_sequences=False)(X)
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_3 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_4 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+Traceback (most recent call last):
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/compile/function_module.py", line 903, in __call__
+    self.fn() if output_subset is None else\
+IndexError: Index out of bounds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 28, in <module>
+    trainer.trainer(config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 251, in trainer
+    train(model_config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 174, in train
+    epochs=model_config['epoch'], verbose=1, class_weight=None, max_queue_size=10)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training.py", line 1415, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training_generator.py", line 213, in fit_generator
+    class_weight=class_weight)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training.py", line 1215, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/backend/theano_backend.py", line 1273, in __call__
+    return self.function(*inputs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/compile/function_module.py", line 917, in __call__
+    storage_map=getattr(self.fn, 'storage_map', None))
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/gof/link.py", line 325, in raise_with_op
+    reraise(exc_type, exc_value, exc_trace)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/compile/function_module.py", line 903, in __call__
+    self.fn() if output_subset is None else\
+IndexError: Index out of bounds.
+Apply node that caused the error: GpuAdvancedSubtensor1(embedding_1/embeddings, GpuContiguous.0)
+Toposort index: 97
+Inputs types: [GpuArrayType<None>(float32, matrix), GpuArrayType<None>(int64, vector)]
+Inputs shapes: [(27009, 300), (6400,)]
+Inputs strides: [(1200, 4), (8,)]
+Inputs values: ['not shown', 'not shown']
+Outputs clients: [[GpuReshape{3}(GpuAdvancedSubtensor1.0, MakeVector{dtype='int64'}.0)]]
+
+Backtrace when the node is created(use Theano flag traceback.limit=N to make it longer):
+  File "main.py", line 28, in <module>
+    trainer.trainer(config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 251, in trainer
+    train(model_config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 123, in train
+    X = Embedding(output_dim=model_config['dim_word'], input_dim=model_config['worddict'], input_length=model_config['max_cap_length'])(cap_input)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/base_layer.py", line 457, in __call__
+    output = self.call(inputs, **kwargs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/embeddings.py", line 139, in call
+    out = K.gather(self.embeddings, inputs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/backend/theano_backend.py", line 514, in gather
+    y = reference[indices]
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/type.py", line 675, in __getitem__
+    return _operators.__getitem__(self, *args)
+  File "main.py", line 28, in <module>
+    trainer.trainer(config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 251, in trainer
+    train(model_config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 123, in train
+    X = Embedding(output_dim=model_config['dim_word'], input_dim=model_config['worddict'], input_length=model_config['max_cap_length'])(cap_input)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/base_layer.py", line 457, in __call__
+    output = self.call(inputs, **kwargs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/embeddings.py", line 139, in call
+    out = K.gather(self.embeddings, inputs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/backend/theano_backend.py", line 514, in gather
+    y = reference[indices]
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/type.py", line 675, in __getitem__
+    return _operators.__getitem__(self, *args)
+
+HINT: Use the Theano flag 'exception_verbosity=high' for a debugprint and storage map footprint of this apply node.

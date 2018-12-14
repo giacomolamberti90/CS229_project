@@ -1,0 +1,274 @@
+--------------------------------------------------------------------------
+[[63756,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: purple-elephants
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+{'cnn': '10crop', 'save_dir': 'anypath', 'max_cap_length': 50, 'lrate': 0.05, 'dim_cnn': 4096, 'batch_size': 128, 'epoch': 300, 'model_cnn': '/home/lucas/cs229/image_caption/data/vgg19_weights.h5', 'margin': 0.05, 'optimizer': 'adam', 'glove.path': '/home/lucas/cs229/image_caption/data/glove.6B.100d.txt', 'dim_word': 300, 'output_dim': 1024, 'data': '/home/lucas/cs229/image_caption/data/coco'}
+Loading dataset
+Size: ims: 
+113287
+Size: caps: 
+566435
+Creating dictionary
+Dictionary size: 27009
+Found 400000 word vectors.
+b'a'
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+b'on'
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+b'of'
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+Loading data
+Great
+Great
+Great
+Image model loading
+Text model loading
+loading the joined model
+compiling the model
+2.110078125
+Epoch 1/1
+
+  1/885 [..............................] - ETA: 38:11 - loss: nan
+  2/885 [..............................] - ETA: 22:04 - loss: nan
+  3/885 [..............................] - ETA: 16:25 - loss: nan
+  4/885 [..............................] - ETA: 13:28 - loss: nan
+  5/885 [..............................] - ETA: 11:42 - loss: nan
+  6/885 [..............................] - ETA: 10:32 - loss: nan
+  7/885 [..............................] - ETA: 9:41 - loss: nan 
+  8/885 [..............................] - ETA: 9:03 - loss: nan
+  9/885 [..............................] - ETA: 8:33 - loss: nan
+ 10/885 [..............................] - ETA: 8:09 - loss: nan
+ 11/885 [..............................] - ETA: 7:50 - loss: nan
+ 12/885 [..............................] - ETA: 7:33 - loss: nan
+ 13/885 [..............................] - ETA: 7:20 - loss: nan
+ 14/885 [..............................] - ETA: 7:08 - loss: nan
+ 15/885 [..............................] - ETA: 6:57 - loss: nan
+ 16/885 [..............................] - ETA: 6:48 - loss: nan
+ 17/885 [..............................] - ETA: 6:40 - loss: nan
+ 18/885 [..............................] - ETA: 6:33 - loss: nan
+ 19/885 [..............................] - ETA: 6:26 - loss: nan
+ 20/885 [..............................] - ETA: 6:20 - loss: nan
+ 21/885 [..............................] - ETA: 6:15 - loss: nan
+ 22/885 [..............................] - ETA: 6:10 - loss: nan
+ 23/885 [..............................] - ETA: 6:06 - loss: nan
+ 24/885 [..............................] - ETA: 6:01 - loss: nan
+ 25/885 [..............................] - ETA: 5:58 - loss: nan
+ 26/885 [..............................] - ETA: 5:54 - loss: nan
+ 27/885 [..............................] - ETA: 5:51 - loss: nan
+ 28/885 [..............................] - ETA: 5:48 - loss: nan
+ 29/885 [..............................] - ETA: 5:45 - loss: nan
+ 30/885 [>.............................] - ETA: 5:42 - loss: nan
+ 31/885 [>.............................] - ETA: 5:39 - loss: nan
+ 32/885 [>.............................] - ETA: 5:37 - loss: nan
+ 33/885 [>.............................] - ETA: 5:34 - loss: nan
+ 34/885 [>.............................] - ETA: 5:32 - loss: nan
+ 35/885 [>.............................] - ETA: 5:30 - loss: nan
+ 36/885 [>.............................] - ETA: 5:28 - loss: nan
+ 37/885 [>.............................] - ETA: 5:26 - loss: nan
+ 38/885 [>.............................] - ETA: 5:24 - loss: nan
+ 39/885 [>.............................] - ETA: 5:23 - loss: nan
+ 40/885 [>.............................] - ETA: 5:21 - loss: nan
+ 41/885 [>.............................] - ETA: 5:19 - loss: nan
+ 42/885 [>.............................] - ETA: 5:18 - loss: nan
+ 43/885 [>.............................] - ETA: 5:16 - loss: nan
+ 44/885 [>.............................] - ETA: 5:15 - loss: nan
+ 45/885 [>.............................] - ETA: 5:14 - loss: nan
+ 46/885 [>.............................] - ETA: 5:12 - loss: nan
+ 47/885 [>.............................] - ETA: 5:11 - loss: nan
+ 48/885 [>.............................] - ETA: 5:10 - loss: nan
+ 49/885 [>.............................] - ETA: 5:09 - loss: nan
+ 50/885 [>.............................] - ETA: 5:07 - loss: nan
+ 51/885 [>.............................] - ETA: 5:06 - loss: nan
+ 52/885 [>.............................] - ETA: 5:05 - loss: nan
+ 53/885 [>.............................] - ETA: 5:04 - loss: nan
+ 54/885 [>.............................] - ETA: 5:03 - loss: nan
+ 55/885 [>.............................] - ETA: 5:02 - loss: nan
+ 56/885 [>.............................] - ETA: 5:01 - loss: nan
+ 57/885 [>.............................] - ETA: 5:00 - loss: nan
+ 58/885 [>.............................] - ETA: 4:59 - loss: nan
+ 59/885 [>.............................] - ETA: 4:58 - loss: nan
+ 60/885 [=>............................] - ETA: 4:57 - loss: nan
+ 61/885 [=>............................] - ETA: 4:56 - loss: nan
+ 62/885 [=>............................] - ETA: 4:55 - loss: nan
+ 63/885 [=>............................] - ETA: 4:54 - loss: nan
+ 64/885 [=>............................] - ETA: 4:54 - loss: nan
+ 65/885 [=>............................] - ETA: 4:53 - loss: nan
+ 66/885 [=>............................] - ETA: 4:52 - loss: nan
+ 67/885 [=>............................] - ETA: 4:51 - loss: nan
+ 68/885 [=>............................] - ETA: 4:50 - loss: nan
+ 69/885 [=>............................] - ETA: 4:50 - loss: nan
+ 70/885 [=>............................] - ETA: 4:49 - loss: nan
+ 71/885 [=>............................] - ETA: 4:48 - loss: nan
+ 72/885 [=>............................] - ETA: 4:47 - loss: nan
+ 73/885 [=>............................] - ETA: 4:47 - loss: nan
+ 74/885 [=>............................] - ETA: 4:46 - loss: nan
+ 75/885 [=>............................] - ETA: 4:45 - loss: nan
+ 76/885 [=>............................] - ETA: 4:45 - loss: nan
+ 77/885 [=>............................] - ETA: 4:44 - loss: nan
+ 78/885 [=>............................] - ETA: 4:43 - loss: nan
+ 79/885 [=>............................] - ETA: 4:43 - loss: nan
+ 80/885 [=>............................] - ETA: 4:42 - loss: nan
+ 81/885 [=>............................] - ETA: 4:41 - loss: nan
+ 82/885 [=>............................] - ETA: 4:41 - loss: nan
+ 83/885 [=>............................] - ETA: 4:40 - loss: nan
+ 84/885 [=>............................] - ETA: 4:39 - loss: nan
+ 85/885 [=>............................] - ETA: 4:39 - loss: nan
+ 86/885 [=>............................] - ETA: 4:38 - loss: nan
+ 87/885 [=>............................] - ETA: 4:38 - loss: nan
+ 88/885 [=>............................] - ETA: 4:37 - loss: nan
+ 89/885 [==>...........................] - ETA: 4:36 - loss: nan
+ 90/885 [==>...........................] - ETA: 4:36 - loss: nan
+ 91/885 [==>...........................] - ETA: 4:35 - loss: nan
+ 92/885 [==>...........................] - ETA: 4:35 - loss: nan
+ 93/885 [==>...........................] - ETA: 4:34 - loss: nan
+ 94/885 [==>...........................] - ETA: 4:33 - loss: nan
+ 95/885 [==>...........................] - ETA: 4:33 - loss: nan
+ 96/885 [==>...........................] - ETA: 4:32 - loss: nan
+ 97/885 [==>...........................] - ETA: 4:32 - loss: nan
+ 98/885 [==>...........................] - ETA: 4:31 - loss: nan
+ 99/885 [==>...........................] - ETA: 4:31 - loss: nan
+100/885 [==>...........................] - ETA: 4:30 - loss: nan
+101/885 [==>...........................] - ETA: 4:30 - loss: nan
+102/885 [==>...........................] - ETA: 4:29 - loss: nan
+103/885 [==>...........................] - ETA: 4:29 - loss: nan
+104/885 [==>...........................] - ETA: 4:28 - loss: nan
+105/885 [==>...........................] - ETA: 4:28 - loss: nan
+106/885 [==>...........................] - ETA: 4:27 - loss: nan
+107/885 [==>...........................] - ETA: 4:27 - loss: nan
+108/885 [==>...........................] - ETA: 4:26 - loss: nan
+109/885 [==>...........................] - ETA: 4:26 - loss: nan
+110/885 [==>...........................] - ETA: 4:25 - loss: nan
+111/885 [==>...........................] - ETA: 4:25 - loss: nan
+112/885 [==>...........................] - ETA: 4:24 - loss: nan
+113/885 [==>...........................] - ETA: 4:24 - loss: nan
+114/885 [==>...........................] - ETA: 4:23 - loss: nan
+115/885 [==>...........................] - ETA: 4:23 - loss: nan
+116/885 [==>...........................] - ETA: 4:22 - loss: nan
+117/885 [==>...........................] - ETA: 4:22 - loss: nan
+118/885 [==>...........................] - ETA: 4:21 - loss: nan
+119/885 [===>..........................] - ETA: 4:21 - loss: nan
+120/885 [===>..........................] - ETA: 4:20 - loss: nan
+121/885 [===>..........................] - ETA: 4:20 - loss: nan
+122/885 [===>..........................] - ETA: 4:19 - loss: nan
+123/885 [===>..........................] - ETA: 4:19 - loss: nan
+124/885 [===>..........................] - ETA: 4:18 - loss: nan
+125/885 [===>..........................] - ETA: 4:18 - loss: nan
+126/885 [===>..........................] - ETA: 4:18 - loss: nan
+127/885 [===>..........................] - ETA: 4:17 - loss: nan
+128/885 [===>..........................] - ETA: 4:17 - loss: nan
+129/885 [===>..........................] - ETA: 4:16 - loss: nan
+130/885 [===>..........................] - ETA: 4:16 - loss: nan
+131/885 [===>..........................] - ETA: 4:15 - loss: nan
+132/885 [===>..........................] - ETA: 4:15 - loss: nan
+133/885 [===>..........................] - ETA: 4:14 - loss: nan/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7201 on context None
+Mapped name None to device cuda0: Tesla M60 (F034:00:00.0)
+/anaconda/envs/py35/lib/python3.5/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using Theano backend.
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_1 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_2 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/data/home/lucas/cs229/image_caption/code/trainer.py:136: UserWarning: Update your `GRU` call to the Keras 2 API: `GRU(units=1024, return_sequences=False)`
+  X = GRU(output_dim=model_config['output_dim'], return_sequences=False)(X)
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_3 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+/anaconda/envs/py35/lib/python3.5/site-packages/keras/layers/core.py:661: UserWarning: `output_shape` argument not specified for layer lambda_4 and cannot be automatically inferred with the Theano backend. Defaulting to output shape `(None, 1024)` (same as input shape). If the expected output shape is different, specify it via the `output_shape` argument.
+  .format(self.name, input_shape))
+Traceback (most recent call last):
+  File "main.py", line 29, in <module>
+    trainer.trainer(config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 264, in trainer
+    train(model_config)
+  File "/data/home/lucas/cs229/image_caption/code/trainer.py", line 223, in train
+    epochs=model_config['epoch']/model_config['epoch'], verbose=1, class_weight=None, max_queue_size=1)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training.py", line 1415, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training_generator.py", line 213, in fit_generator
+    class_weight=class_weight)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/engine/training.py", line 1215, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/keras/backend/theano_backend.py", line 1273, in __call__
+    return self.function(*inputs)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/compile/function_module.py", line 903, in __call__
+    self.fn() if output_subset is None else\
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/scan_module/scan_op.py", line 963, in rval
+    r = p(n, [x[0] for x in i], o)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/scan_module/scan_op.py", line 952, in p
+    self, node)
+  File "theano/scan_module/scan_perform.pyx", line 586, in theano.scan_module.scan_perform.perform (/data/home/lucas/.theano/compiledir_Linux-4.15--azure-x86_64-with-debian-stretch-sid-x86_64-3.5.5-64/scan_perform/mod.cpp:6946)
+  File "/anaconda/envs/py35/lib/python3.5/site-packages/theano/gpuarray/type.py", line 373, in value_zeros
+    def value_zeros(self, shape):
+KeyboardInterrupt
