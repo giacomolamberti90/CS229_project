@@ -8,15 +8,19 @@ The repository contains:
 
   - code: directory containing all the modules of the code:
   
-          1. main.py       -> call the trainer
+          1. main.py              -> call the trainer
           
-          2. trainer.py    -> train the models
+          2. trainer.py           -> train the models
           
-          3. datasource.py -> define dataset as iterator
+          3. datasource.py        -> define dataset as iterator
           
-          4. dataset.py    -> load the dataset
+          4. dataset.py           -> load the dataset
           
-          5. evaluation.py -> compute the evaluation metrics
+          5. evaluation.py        -> compute the evaluation metrics
+          
+          6. eval_only.py         -> perform evaluation (no training)
+          
+          7. eval_custom_input.py -> read an interactive caption and pull put the top 10 related images (need the raw pictures to work!)
           
           
   - results: directory containing text files with a summary of the various results.
