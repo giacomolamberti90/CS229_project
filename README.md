@@ -1,6 +1,6 @@
 # Image-Caption Retrieval
-# Junyang Qian & Giacomo Lamberti
-# CS229 Machine Learning
+Junyang Qian & Giacomo Lamberti
+CS229 Machine Learning
 
 The repository contains:
   - code: directory containing all the modules of the code:
